@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Jason's List Project
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+	 <ion-item>
+	 <ion-input placeholder="Enter New Item"> </ion-input>
+	 </ion-item>
+	 <ion-item>
+	 <ion-button full  (click)="addItem()"> Add Item </ion-button>
+	 </ion-item>
+	</ion-list>
+<ion-item-divider color="secondary">
+  <ion-label>
+    Your List
+  </ion-label>
+</ion-item-divider>
+<ion-list>
+		<ion-item> 	
+			<ion-item *ngFor="let grocery of groceries">{{grocery}}</ion-item>
+		</ion-item>
+	</ion-list>
+</ion-content>
